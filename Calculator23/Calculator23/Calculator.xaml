@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator23.Calculator"
+             BackgroundColor="#404040">
+    <Grid x:Name="controlGrid" RowSpacing="1" ColumnSpacing="1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <BoxView Color="White" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Scale="5" />
+        <Label x:Name="displayLabel2"  TextColor="Gray"   BackgroundColor="White" FontSize = "27" VerticalOptions="Center" HorizontalTextAlignment="End" FontAttributes="None" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" />
+        <Label x:Name="displayLabel" TextColor="Black"  BackgroundColor="White" FontSize = "50" VerticalOptions="Center" HorizontalTextAlignment="End" FontAttributes="None" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" />
+
+        <Button x:Name="backspaceButton" Text="&#x21E6;"  BackgroundColor="Orange" Font="Large" IsEnabled="False" Clicked="OnBackspaceButtonClicked" Grid.Column="0" Grid.Row="2"/>
+        <Button  x:Name="PoM" Text="+/-"  Font="Large" BackgroundColor="Orange"  IsEnabled="True" Clicked="PoMButtonClicked"  Grid.Column="1" Grid.Row="2"/>
+        <Button  x:Name="Sqrt" Text="√"  Font="Large" BackgroundColor="Orange"  IsEnabled="True" Clicked="SqrtButtonClicked" Grid.Column="2" Grid.Row="2"/>
+        <Button  x:Name="Clear" Text="C"  Font="Large" BackgroundColor="Orange" Clicked="ClearButtonClicked" Grid.Column="3" Grid.Row="2"/>
+
+        <Button Text="7" StyleId="7"  BackgroundColor="White" Font="Large" Clicked="OnDigitButtonClicked" Grid.Column="0" Grid.Row="3"/>
+        <Button Text="8" StyleId="8"  BackgroundColor="White" Font="Large" Clicked="OnDigitButtonClicked" Grid.Column="1" Grid.Row="3"/>
+        <Button Text="9" StyleId="9" BackgroundColor="White"  Font="Large" Clicked="OnDigitButtonClicked" Grid.Column="2" Grid.Row="3" />
+        <Button  x:Name="Div" Text="/"  BackgroundColor="Orange" IsEnabled="True" Font="Large" Clicked="DivButtonClicked" Grid.Column="3" Grid.Row="3"/>
+
+        <Button Text="4" StyleId="4"  BackgroundColor="White" Font="Large" Clicked="OnDigitButtonClicked" Grid.Column="0" Grid.Row="4" />
+        <Button Text="5" StyleId="5"   BackgroundColor="White" Font="Large" Clicked="OnDigitButtonClicked" Grid.Column="1" Grid.Row="4"/>
+        <Button Text="6" StyleId="6"  BackgroundColor="White" Font="Large" Clicked="OnDigitButtonClicked" Grid.Column="2" Grid.Row="4"/>
+        <Button  x:Name="Mul" Text="*"  BackgroundColor="Orange" IsEnabled="True" Font="Large" Clicked="MulButtonClicked" Grid.Column="3" Grid.Row="4"/>
+
+        <Button Text="1" StyleId="1"  BackgroundColor="White" Font="Large" Clicked="OnDigitButtonClicked" Grid.Column="0" Grid.Row="5" />
+        <Button Text="2" StyleId="2" BackgroundColor="White"  Font="Large" Clicked="OnDigitButtonClicked" Grid.Column="1" Grid.Row="5"/>
+        <Button Text="3" StyleId="3" BackgroundColor="White"  Font="Large" Clicked="OnDigitButtonClicked" Grid.Column="2" Grid.Row="5" />
+        <Button  x:Name="Min" Text="-"  BackgroundColor="Orange"  IsEnabled="True" Font="Large" Clicked="MinusButtonClicked" Grid.Column="3" Grid.Row="5" />
+
+        <Button Text="0" StyleId="0"  BackgroundColor="White" Font="Large" Clicked="OnDigitButtonClicked" Grid.Column="0" Grid.Row="6"/>
+        <Button  x:Name="Dot" Text="."  BackgroundColor="White"  IsEnabled="True" Font="Large" Clicked="DotButtonClicked" Grid.Column="1" Grid.Row="6"/>
+        <Button  x:Name="Equal" Text="="  BackgroundColor="White"  Font="Large" Clicked="EqualButtonClicked" Grid.Column="2" Grid.Row="6"/>
+        <Button  x:Name="Plus" Text="+" BackgroundColor="Orange"  IsEnabled="True" Font="Large" Clicked="PlusButtonClicked" Grid.Column="3" Grid.Row="6"/>
+    </Grid>
+</ContentPage>
